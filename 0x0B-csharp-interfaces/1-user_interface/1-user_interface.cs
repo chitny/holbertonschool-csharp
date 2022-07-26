@@ -44,6 +44,11 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 
 	}
 
+	public void Break()
+	{
+
+	}
+
 	public void Collect()
 	{
 
