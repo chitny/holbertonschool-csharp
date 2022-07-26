@@ -15,6 +15,7 @@ abstract class Base
 interface IInteractive
 {
     void Interact();
+
 }
 
 /// <summary> Breakable Interface </summary>
@@ -37,7 +38,8 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
 	public int durability { get; set; }
 	public bool isCollected { get; set; }
-
+	public string name { get; set; }
+	
     /// <summary> Takes place when the object interacts with something </summary>
 	public void Interact()
 	{
