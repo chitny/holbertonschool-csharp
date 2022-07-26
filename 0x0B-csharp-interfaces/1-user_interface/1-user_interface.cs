@@ -1,7 +1,7 @@
 ﻿using System;
 
 ///<summary>Base class</summary>
-public abstract class Base
+abstract class Base
 {
 	/// <summary>property</summary>
   	public string name { get; set; }
@@ -13,21 +13,21 @@ public abstract class Base
 }
 
 /// <summary> Interactive interface </summary>
-public interface IInteractive
+interface IInteractive
 {
     void Interact();
 
 }
 
 /// <summary> Breakable Interface </summary>
-public interface IBreakable
+interface IBreakable
 {
     int durability { get; set; }
     void Break();
 }
 
 /// <summary> Collectable Interface </summary>
-public interface ICollectable
+interface ICollectable
 {
     bool isCollected { get; set; }
     void Collect();
@@ -35,27 +35,26 @@ public interface ICollectable
 }
 
 /// <summary> Class that inherits from Base class and all interfaces </summary>
-public class TestObject : Base, IInteractive, IBreakable, ICollectable
+class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
 	public int durability { get; set; }
 	public bool isCollected { get; set; }
-	public string name { get; set; }
 
     /// <summary> Takes place when the object interacts with something </summary>
 	public void Interact()
 	{
-
+		throw new NotImplementedException();
 	}
 
     /// <summary> Takes place when the object brakes. </summary>
 	public void Break()
 	{
-
+		throw new NotImplementedException();
 	}
 
     /// <summary> Takes place when the object collects something.</summary>
 	public void Collect()
 	{
-
+		throw new NotImplementedException();
 	}
 }
