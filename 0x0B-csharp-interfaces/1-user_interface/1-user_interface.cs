@@ -1,9 +1,10 @@
 ﻿using System;
 
 ///<summary>Base class</summary>
-abstract class Base
+public abstract class Base
 {
-  public string name = "";
+	/// <summary>property</summary>
+  	public string name { get; set; }
 
 	public override string ToString()
 	{
@@ -12,21 +13,21 @@ abstract class Base
 }
 
 /// <summary> Interactive interface </summary>
-interface IInteractive
+public interface IInteractive
 {
     void Interact();
 
 }
 
 /// <summary> Breakable Interface </summary>
-interface IBreakable
+public interface IBreakable
 {
     int durability { get; set; }
     void Break();
 }
 
 /// <summary> Collectable Interface </summary>
-interface ICollectable
+public interface ICollectable
 {
     bool isCollected { get; set; }
     void Collect();
@@ -34,12 +35,12 @@ interface ICollectable
 }
 
 /// <summary> Class that inherits from Base class and all interfaces </summary>
-class TestObject : Base, IInteractive, IBreakable, ICollectable
+public class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
 	public int durability { get; set; }
 	public bool isCollected { get; set; }
 	public string name { get; set; }
-	
+
     /// <summary> Takes place when the object interacts with something </summary>
 	public void Interact()
 	{
