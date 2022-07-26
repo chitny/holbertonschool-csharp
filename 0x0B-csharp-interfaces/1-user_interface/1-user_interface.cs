@@ -44,13 +44,6 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 
 	}
 
-    /// <summary> Takes place when the object brakes. </summary>
-	public void Break()
-	{
-
-	}
-
-    /// <summary> Takes place when the object collects something.</summary>
 	public void Collect()
 	{
 
