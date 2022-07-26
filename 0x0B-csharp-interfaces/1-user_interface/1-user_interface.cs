@@ -35,26 +35,24 @@ interface ICollectable
 /// <summary> Class that inherits from Base class and all interfaces </summary>
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-    ///<summary>Property durability</summary>
-    public int durability { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    ///<summary>Property isCollected</summary>
-    public bool isCollected { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    ///<summary>Property isCollected</summary>
-    public string name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+	public int durability { get; set; }
+	public bool isCollected { get; set; }
 
-    ///<summary>Method Interact</summary>
-    public void Interact()
-    {
-        throw new NotImplementedException();
-    }
-    ///<summary>Method Break</summary>
-    public void Break()
-    {
-        throw new NotImplementedException();
-    }
-    ///<summary>Method Collect</summary>
-    public void Collect()
-    {
-        throw new NotImplementedException();
-    }
+    /// <summary> Takes place when the object interacts with something </summary>
+	public void Interact()
+	{
+
+	}
+
+    /// <summary> Takes place when the object brakes. </summary>
+	public void Break()
+	{
+
+	}
+
+    /// <summary> Takes place when the object collects something.</summary>
+	public void Collect()
+	{
+
+	}
 }
